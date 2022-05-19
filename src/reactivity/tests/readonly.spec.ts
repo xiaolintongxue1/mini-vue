@@ -1,4 +1,4 @@
-import { isReadonly, readonly } from '../reactive'
+import { isReadonly, readonly, isProxy } from '../reactive'
 describe("readonly", () => {
     it("should make nested values readonly", () => {
         const original = { foo: 1, bar: { baz: 2 } };
@@ -10,6 +10,9 @@ describe("readonly", () => {
         expect(isReadonly(wrapped)).toBe(true);
         expect(isReadonly(wrapped.bar)).toBe(true);
         expect(isReadonly(wrapped.bar.baz)).toBe(false);
+
+        // test isProxy
+        expect(isProxy(wrapped)).toBe(true)
     })
     it("should call console.warn when call set", () => {
         console.warn = jest.fn();

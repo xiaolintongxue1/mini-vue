@@ -1,4 +1,4 @@
-import { reactive, isReactive } from '../reactive'
+import { reactive, isReactive, isProxy } from '../reactive'
 
 describe('reactive', () => {
     
@@ -17,5 +17,8 @@ describe('reactive', () => {
         expect(isReactive(observed.net)).toBe(true);
         expect(isReactive(observed.net.foo)).toBe(false);
         expect(isReactive(original.net)).toBe(false);
+
+        // isProxy
+        expect(isProxy(observed)).toBe(true);
     })
 })
