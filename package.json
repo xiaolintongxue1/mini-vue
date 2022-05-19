@@ -1,0 +1,21 @@
+{
+  "name": "MY-MINI-VUE",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "xiaolintongxue1 <473809552@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "typescript": "^4.6.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.5.1",
+    "babel-jest": "^28.1.0",
+    "jest": "^28.1.0"
+  }
+}
